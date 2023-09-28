@@ -24,6 +24,11 @@ SELECT amount, payment_date FROM payment WHERE (amount > 10) AND (payment_date B
 
 Получите последние пять аренд фильмов.
 
+```sql
+SELECT * FROM rental ORDER BY rental_date DESC LIMIT 5;
+```
+![sql](https://github.com/OhotinDY/sdb-12-03/blob/main/db3.png)
+
 ### Задание 4
 
 Одним запросом получите активных покупателей, имена которых Kelly или Willie. 
@@ -31,3 +36,10 @@ SELECT amount, payment_date FROM payment WHERE (amount > 10) AND (payment_date B
 Сформируйте вывод в результат таким образом:
 - все буквы в фамилии и имени из верхнего регистра переведите в нижний регистр,
 - замените буквы 'll' в именах на 'pp'.
+
+```sql
+SELECT REPLACE (LOWER (first_name), 'll', 'pp'), LOWER (last_name), active
+FROM customer
+WHERE (first_name LIKE 'Kelly' OR first_name LIKE 'Willie') AND (active = 1);
+```
+![sql](https://github.com/OhotinDY/sdb-12-03/blob/main/db4.png)
