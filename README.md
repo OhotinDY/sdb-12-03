@@ -15,6 +15,11 @@ SELECT DISTINCT district FROM address WHERE (district LIKE 'K%a' COLLATE utf8mb4
 
 Получите из таблицы платежей за прокат фильмов информацию по платежам, которые выполнялись в промежуток с 15 июня 2005 года по 18 июня 2005 года **включительно** и стоимость которых превышает 10.00.
 
+```sql
+SELECT amount, payment_date FROM payment WHERE (amount > 10) AND (payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59');
+```
+![sql]()
+
 ### Задание 3
 
 Получите последние пять аренд фильмов.
