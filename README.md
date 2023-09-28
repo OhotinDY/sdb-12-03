@@ -9,7 +9,7 @@
 ```sql
 SELECT DISTINCT district FROM address WHERE (district LIKE 'K%a' COLLATE utf8mb4_0900_as_cs) AND (district NOT LIKE '% %');
 ```
-![sql]()
+![sql](https://github.com/OhotinDY/sdb-12-03/blob/main/db1.png)
 
 ### Задание 2
 
@@ -18,7 +18,7 @@ SELECT DISTINCT district FROM address WHERE (district LIKE 'K%a' COLLATE utf8mb4
 ```sql
 SELECT amount, payment_date FROM payment WHERE (amount > 10) AND (payment_date BETWEEN '2005-06-15 00:00:00' AND '2005-06-18 23:59:59');
 ```
-![sql]()
+![sql](https://github.com/OhotinDY/sdb-12-03/blob/main/db2.png)
 
 ### Задание 3
 
